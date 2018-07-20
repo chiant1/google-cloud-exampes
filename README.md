@@ -12,5 +12,8 @@ gcloud compute instances list
 ~~~~
 
 # Clone sources
-# Delete cluster
 
+# Delete dataproc cluster
+~~~~
+gcloud dataproc clusters delete <CLUSTER> --async --quiet --region=us-central1
+~~~~
