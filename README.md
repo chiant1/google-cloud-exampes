@@ -20,6 +20,8 @@ gcloud dataproc clusters delete <CLUSTER> --async --quiet --region=us-central1
 
 # Submit job to dataproc cluster
 ~~~~
-gcloud dataproc jobs submit pyspark "gs://<BUCKET>/datalab-notebooks/trackml/pyspark/pyspark-trackml.py" \
+gcloud dataproc jobs submit pyspark \
+  "gs://<BUCKET>/datalab-notebooks/trackml/pyspark/pyspark-trackml.py" \
   --cluster=<CLUSTER> --async --region=us-central1
 ~~~~
+[Documentation: gcloud dataproc jobs submit pyspark](https://cloud.google.com/sdk/gcloud/reference/dataproc/jobs/submit/pyspark)
