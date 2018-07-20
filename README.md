@@ -1,4 +1,4 @@
-# Create cluster
+# Create a dataproc cluster
 ~~~~
 gcloud dataproc --region us-central1 clusters create <CLUSTER> \
   --subnet default --zone us-central1-a \
