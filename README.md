@@ -8,7 +8,7 @@ gcloud dataproc --region us-central1 clusters create ${CLUSTER} \
   --master-boot-disk-size 20 --image-version 1.2 \
   --scopes 'https://www.googleapis.com/auth/cloud-platform' \
   --project ${GOOGLE_CLOUD_PROJECT} \
-  --initialization-actions 'gs://${BUCKET}/datalab-notebooks/trackml/dataproc/init.sh'
+  --initialization-actions "gs://${BUCKET}/datalab-notebooks/trackml/dataproc/init.sh"
 
 # 2. Standard Cluster 
 gcloud dataproc --region us-central1 clusters create ${CLUSTER} \
@@ -19,7 +19,7 @@ gcloud dataproc --region us-central1 clusters create ${CLUSTER} \
   --image-version 1.2 \
   --scopes 'https://www.googleapis.com/auth/cloud-platform' \
   --project ${GOOGLE_CLOUD_PROJECT} \
-  --initialization-actions 'gs://${BUCKET}/datalab-notebooks/trackml/dataproc/init.sh'
+  --initialization-actions "gs://${BUCKET}/datalab-notebooks/trackml/dataproc/init.sh"
 
 gcloud compute instances list
 ~~~~
