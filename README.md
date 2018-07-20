@@ -7,6 +7,8 @@ gcloud dataproc --region us-central1 clusters create <CLUSTER> \
   --scopes 'https://www.googleapis.com/auth/cloud-platform' \
   --project <PROJECT> \
   --initialization-actions 'gs://<BUCKET>/datalab-notebooks/trackml/dataproc/init.sh'
+  
+gcloud compute instances list
 ~~~~
 
 # Clone sources
