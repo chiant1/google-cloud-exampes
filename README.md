@@ -15,8 +15,8 @@ gcloud dataproc --region us-central1 clusters create ${CLUSTER} \
   --subnet default --zone us-central1-a \
   --master-machine-type n1-standard-1 --master-boot-disk-size 20 \
   --num-workers 2 \
-  --num-preemptible-workers 2 \
-  --worker-machine-type n1-highcpu-8 --worker-boot-disk-size 20 \
+  --num-preemptible-workers 3 \
+  --worker-machine-type n1-highcpu-4 --worker-boot-disk-size 20 \
   --image-version 1.2 \
   --scopes 'https://www.googleapis.com/auth/cloud-platform' \
   --project ${GOOGLE_CLOUD_PROJECT} \
