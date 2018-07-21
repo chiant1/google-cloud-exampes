@@ -29,8 +29,8 @@ gcloud compute instances list
 
 ~~~~
 gcloud config list
-git config --global user.email ${USER}@${HOST}
-git config --global user.name ${USER}
+#git config --global user.email ${USER}@${HOST}
+git config --global user.name ${USER}@${HOST}
 gcloud source repos clone datalab-notebooks
 ~~~~
 
