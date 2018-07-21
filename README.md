@@ -21,6 +21,7 @@ gcloud dataproc --region us-central1 clusters create ${CLUSTER} \
   --project ${GOOGLE_CLOUD_PROJECT} \
   --initialization-actions "gs://${BUCKET}/datalab-notebooks/trackml/dataproc/init.sh"
 
+# 3. List Cloud Engine instances
 gcloud compute instances list
 ~~~~
 
