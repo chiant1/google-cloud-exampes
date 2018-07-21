@@ -48,6 +48,9 @@ spark-submit pyspark-trackml.py
 # 2. Submit job
 gcloud dataproc jobs submit pyspark \
   "gs://${BUCKET}/datalab-notebooks/trackml/pyspark/pyspark-trackml.py" \
-  --cluster=${CLUSTER} --async --region=us-central1
+  --cluster=${CLUSTER} --async --region=us-central1 \
+  -- \
+  10
+  
 ~~~~
 [Documentation: gcloud dataproc jobs submit pyspark](https://cloud.google.com/sdk/gcloud/reference/dataproc/jobs/submit/pyspark)
