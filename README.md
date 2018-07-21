@@ -13,9 +13,9 @@ gcloud dataproc --region us-central1 clusters create ${CLUSTER} \
 # 2. Standard Cluster 
 gcloud dataproc --region us-central1 clusters create ${CLUSTER} \
   --subnet default --zone us-central1-a \
-  --master-machine-type n1-standard-2 --master-boot-disk-size 20 \
+  --master-machine-type n1-standard-1 --master-boot-disk-size 20 \
   --num-workers 2 \
-  --worker-machine-type n1-standard-2 --worker-boot-disk-size 20 \
+  --worker-machine-type n1-standard-4 --worker-boot-disk-size 20 \
   --image-version 1.2 \
   --scopes 'https://www.googleapis.com/auth/cloud-platform' \
   --project ${GOOGLE_CLOUD_PROJECT} \
@@ -26,6 +26,12 @@ gcloud compute instances list
 ~~~~
 
 # Clone sources
+
+gcloud config list
+git config --global user.email <EMAIL>
+git config --global user.name <USERNAME>
+gcloud source repos clone datalab-notebooks
+
 
 # Delete dataproc cluster
 ~~~~
