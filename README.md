@@ -15,7 +15,7 @@ gcloud dataproc --region us-central1 clusters create ${CLUSTER} \
   --subnet default --zone us-central1-a \
   --master-machine-type n1-standard-1 --master-boot-disk-size 20 \
   --num-workers 2 \
-  --worker-machine-type n1-standard-8 --worker-boot-disk-size 20 \
+  --worker-machine-type n1-highcpu-16 --worker-boot-disk-size 20 \
   --image-version 1.2 \
   --scopes 'https://www.googleapis.com/auth/cloud-platform' \
   --project ${GOOGLE_CLOUD_PROJECT} \
@@ -48,6 +48,13 @@ spark-submit pyspark-trackml.py 10
 # 2. Submit job
 gcloud dataproc jobs submit pyspark \
   "gs://${BUCKET}/datalab-notebooks/trackml/pyspark/pyspark-trackml.py" \
+  --cluster=${CLUSTER} --async --region=us-central1 \
+  -- \
+  10
+
+# 3. Submit job to generate full submission
+gcloud dataproc jobs submit pyspark \
+  "gs://${BUCKET}/datalab-notebooks/trackml/pyspark/pyspark-trackml-submission.py" \
   --cluster=${CLUSTER} --async --region=us-central1 \
   -- \
   10
