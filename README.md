@@ -27,11 +27,12 @@ gcloud compute instances list
 
 # Clone sources
 
+~~~~
 gcloud config list
-git config --global user.email <EMAIL>
-git config --global user.name <USERNAME>
+git config --global user.email ${USER}@${HOST}
+git config --global user.name ${USER}
 gcloud source repos clone datalab-notebooks
-
+~~~~
 
 # Delete dataproc cluster
 ~~~~
