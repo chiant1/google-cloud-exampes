@@ -5,7 +5,7 @@
 1. [Submit job](#Submit-job-to-dataproc-cluster)
 1. [Delete cluster](#Delete-dataproc-cluster)
 
-# 1. Create a dataproc cluster
+# Create a dataproc cluster
 ~~~~
 
 # 1. Single-Node Cluster 
@@ -44,7 +44,7 @@ gcloud dataproc --region us-central1 clusters create ${CLUSTER} \
 gcloud compute instances list
 ~~~~
 
-# 1. Clone sources
+# Clone sources
 
 ~~~~
 gcloud config list
