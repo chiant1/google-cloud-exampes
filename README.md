@@ -53,7 +53,7 @@ git config --global user.name ${USER}@${HOST}
 gcloud source repos clone datalab-notebooks
 ~~~~
 
-# Submit job to dataproc cluster
+# Submit-job-to-dataproc-cluster
 
 ~~~~
 # 1. Test
