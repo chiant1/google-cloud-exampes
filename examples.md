@@ -1,7 +1,9 @@
+# Content
 1. [Heading](#heading)
 1. [Heading](#heading-1)
 1. [Heading](#heading-2)
 
+# Body
 
 ## Heading
 
