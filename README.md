@@ -1,3 +1,7 @@
+# Contents
+
+[Create-a-dataproc-cluster](#Create-a-dataproc-cluster)
+
 # Create a dataproc cluster
 ~~~~
 
