@@ -3,7 +3,7 @@
 1. [Create cluster](#Create-a-dataproc-cluster)
 1. [Clone sources](#Clone-sources)
 1. [Submit job](#Submit-job-to-dataproc-cluster)
-1. [Delete cluster](#Delete-dataproc-cluster)
+1. [Delete cluster](#Delete dataproc cluster)
 
 # Create a dataproc cluster
 ~~~~
@@ -53,7 +53,7 @@ git config --global user.name ${USER}@${HOST}
 gcloud source repos clone datalab-notebooks
 ~~~~
 
-# Submit-job-to-dataproc-cluster
+# Submit job to dataproc cluster
 
 ~~~~
 # 1. Test
