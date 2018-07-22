@@ -5,15 +5,10 @@
 1. [Heading](#heading-2)
 
 1. Item1
-  1.1. SubItemA
-  1.2. SubItemB
-    - wat
-      - inception noise
-Item1
-1.1. SubItemA
-1.2. SubItemB
-wat
-inception noise
+ 1.1. SubItemA
+ 1.2. SubItemB
+  - wat
+  - inception noise
 
 # Body
 
