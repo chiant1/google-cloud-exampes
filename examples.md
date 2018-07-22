@@ -1,8 +1,8 @@
 # Content
 
-1. (Item1)[#heading]
-1. (Item2)[#heading-1]
-1. (Item3)[#heading-2]
+1. [Item1](#heading)
+1. [Item2](#heading-1)
+1. [Item3](#heading-2)
  
 
 # Body
