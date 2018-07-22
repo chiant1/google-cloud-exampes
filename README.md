@@ -61,10 +61,10 @@ gcloud dataproc jobs submit pyspark \
 
 # 3. Submit job to generate full submission
 gcloud dataproc jobs submit pyspark \
-  "gs://${BUCKET}/datalab-notebooks/trackml/pyspark/pyspark-trackml-submission.py" \
+  "gs://${BUCKET}/datalab-notebooks/trackml/pyspark/pyspark-trackml-submission1.py" \
   --cluster=${CLUSTER} --async --region=us-central1 \
   -- \
-  10
+  --step 1 --repeat 10
   
 ~~~~
 [Documentation: gcloud dataproc jobs submit pyspark](https://cloud.google.com/sdk/gcloud/reference/dataproc/jobs/submit/pyspark)
