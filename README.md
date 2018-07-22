@@ -1,6 +1,9 @@
 # Contents
 
-[Create-a-dataproc-cluster](#Create-a-dataproc-cluster)
+1. [Create cluster](#Create-a-dataproc-cluster)
+1. [Clone sources](#Clone-sources)
+1. [Submit job](Submit-job-to-dataproc-cluster)
+1. [Delete cluster](Delete-dataproc-cluster)
 
 # Create a dataproc cluster
 ~~~~
@@ -50,11 +53,6 @@ git config --global user.name ${USER}@${HOST}
 gcloud source repos clone datalab-notebooks
 ~~~~
 
-# Delete dataproc cluster
-~~~~
-gcloud dataproc clusters delete ${CLUSTER} --async --quiet --region=us-central1
-~~~~
-
 # Submit job to dataproc cluster
 
 ~~~~
@@ -77,3 +75,9 @@ gcloud dataproc jobs submit pyspark \
   
 ~~~~
 [Documentation: gcloud dataproc jobs submit pyspark](https://cloud.google.com/sdk/gcloud/reference/dataproc/jobs/submit/pyspark)
+
+# Delete dataproc cluster
+~~~~
+gcloud dataproc clusters delete ${CLUSTER} --async --quiet --region=us-central1
+~~~~
+
