@@ -10,7 +10,18 @@ gcloud dataproc --region us-central1 clusters create ${CLUSTER} \
   --project ${GOOGLE_CLOUD_PROJECT} \
   --initialization-actions "gs://${BUCKET}/datalab-notebooks/trackml/dataproc/init.sh"
 
-# 2. Standard Cluster 
+# 2. Small Cluster 
+gcloud dataproc --region us-central1 clusters create ${CLUSTER} \
+  --subnet default --zone us-central1-a \
+  --master-machine-type n1-standard-1 --master-boot-disk-size 20 \
+  --num-workers 2 \
+  --worker-machine-type n1-highcpu-4 --worker-boot-disk-size 20 \
+  --image-version 1.2 \
+  --scopes 'https://www.googleapis.com/auth/cloud-platform' \
+  --project ${GOOGLE_CLOUD_PROJECT} \
+  --initialization-actions "gs://${BUCKET}/datalab-notebooks/trackml/dataproc/init.sh"
+  
+# 3. Standard Cluster 
 gcloud dataproc --region us-central1 clusters create ${CLUSTER} \
   --subnet default --zone us-central1-a \
   --master-machine-type n1-standard-1 --master-boot-disk-size 20 \
