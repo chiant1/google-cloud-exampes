@@ -12,7 +12,7 @@ datalab beta create-gpu datalab-instance-name
 
 # 2. Connect to datalab
 ~~~~
-datalab connect --zone us-central1-a --port 8081 trackml2
+datalab connect --zone us-central1-a --port 8081 trackml
 ~~~~
 
 # 3. Delete instance and all disks
