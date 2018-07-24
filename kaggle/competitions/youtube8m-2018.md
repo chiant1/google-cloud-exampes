@@ -1,5 +1,10 @@
 # Model
 
+## Start datalab with GPU
+~~~~
+datalab beta create-gpu yt  --zone us-central1-a
+~~~~
+
 ## Cancel ML-job
 ~~~~
 gcloud beta ml-engine jobs list
