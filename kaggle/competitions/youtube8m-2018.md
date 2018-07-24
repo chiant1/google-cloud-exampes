@@ -1,8 +1,11 @@
 # Model
 
+## Environments
+- MACHINE - name of VM instance in Google Compute Engine
+
 ## Start datalab with GPU
 ~~~~
-datalab beta create-gpu yt  --zone us-central1-a
+datalab beta create-gpu ${MACHINE} --zone us-central1-a
 ~~~~
 
 ## Cancel ML-job
