@@ -16,9 +16,20 @@ gcloud beta compute --project=${GOOGLE_CLOUD_PROJECT} instances create ${MACHINE
   --scopes=https://www.googleapis.com/auth/cloud-platform \
   --accelerator=type=nvidia-tesla-k80,count=1 \
   --image=debian-9-stretch-v20180716 --image-project=debian-cloud \
-  --boot-disk-size=20GB --boot-disk-type=pd-standard --boot-disk-device-name=instance-1
+  --boot-disk-size=20GB --boot-disk-type=pd-standard --boot-disk-device-name=${MACHINE}
   
+gcloud beta compute --project=${GOOGLE_CLOUD_PROJECT} instances create ${MACHINE} \
+  --zone=us-central1-a --machine-type=n1-standard-8 \
+  --subnet=default --network-tier=PREMIUM --maintenance-policy=TERMINATE \
+  --service-account=374004420067-compute@developer.gserviceaccount.com \
+  --scopes=https://www.googleapis.com/auth/cloud-platform \
+  --image=debian-9-stretch-v20180716 --image-project=debian-cloud \
+  --boot-disk-size=20GB --boot-disk-type=pd-standard --boot-disk-device-name=${MACHINE}
+
  gcloud compute instances list
+ 
+ gcloud compute instances delete ${MACHINE} --zone us-central1-a --delete-disks=all
+ 
 ~~~~
 
 ## Start datalab with GPU
