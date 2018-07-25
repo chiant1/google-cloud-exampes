@@ -2,14 +2,14 @@
 
 ## Environments
 ~~~~
-PROJECT - ...
+GOOGLE_CLOUD_PROJECT - ...
 MACHINE - name of VM instance in Google Compute Engine
 SERVICE_ACCOUNT - ...
 ~~~~
 
 ## Start compute engine node with GPU
 ~~~~
-gcloud beta compute --project=${PROJECT} instances create ${MACHINE} \
+gcloud beta compute --project=${GOOGLE_CLOUD_PROJECT} instances create ${MACHINE} \
   --zone=us-central1-a --machine-type=n1-standard-8 \
   --subnet=default --network-tier=PREMIUM --maintenance-policy=TERMINATE \
   --service-account=${SERVICE_ACCOUNT} \
