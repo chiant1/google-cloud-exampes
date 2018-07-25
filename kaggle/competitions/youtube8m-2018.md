@@ -1,7 +1,11 @@
 # Model
 
 ## Environments
-- MACHINE - name of VM instance in Google Compute Engine
+~~~~
+PROJECT - ...
+MACHINE - name of VM instance in Google Compute Engine
+SERVICE_ACCOUNT - ...
+~~~~
 
 ## Start compute engine node with GPU
 ~~~~
