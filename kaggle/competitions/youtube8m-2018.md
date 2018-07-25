@@ -13,6 +13,8 @@ gcloud beta compute --project=${PROJECT} instances create ${MACHINE} \
   --accelerator=type=nvidia-tesla-k80,count=1 \
   --image=debian-9-stretch-v20180716 --image-project=debian-cloud \
   --boot-disk-size=20GB --boot-disk-type=pd-standard --boot-disk-device-name=instance-1
+  
+ gcloud compute instances list
 ~~~~
 
 ## Start datalab with GPU
