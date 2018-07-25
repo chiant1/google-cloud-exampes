@@ -29,8 +29,17 @@ gcloud beta compute --project=${GOOGLE_CLOUD_PROJECT} instances create ${MACHINE
  gcloud compute instances list
  
  gcloud compute instances delete ${MACHINE} --zone us-central1-a --delete-disks=all
- 
 ~~~~
+
+## Clone sources
+~~~~
+sudo apt-get install -y git
+gcloud config list
+git config --global user.email ${USER}@${HOST}
+git config --global user.name ${USER}@${HOST}
+gcloud source repos clone datalab-notebooks
+~~~~
+
 
 ## Start datalab with GPU
 ~~~~
