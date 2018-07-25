@@ -66,3 +66,8 @@ gcloud ml-engine jobs cancel job
 # References
 - [Starter code](https://github.com/google/youtube-8m)
 - [Winner solution 2017](https://github.com/antoine77340/Youtube-8M-WILLOW)
+
+# Papers
+- [Video Representation Learning and Latent Concept Mining for Large-scale
+Multi-label Video Classification](https://arxiv.org/pdf/1707.01408.pdf)
+- https://arxiv.org/pdf/1706.04488
