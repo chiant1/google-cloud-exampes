@@ -7,8 +7,9 @@ MACHINE - name of VM instance in Google Compute Engine
 SERVICE_ACCOUNT - ...
 ~~~~
 
-## Start compute engine node with GPU
+## Start compute engine node
 ~~~~
+# With GPU
 gcloud beta compute --project=${GOOGLE_CLOUD_PROJECT} instances create ${MACHINE} \
   --zone=us-central1-a --machine-type=n1-standard-8 \
   --subnet=default --network-tier=PREMIUM --maintenance-policy=TERMINATE \
@@ -27,6 +28,16 @@ gcloud beta compute --project=${GOOGLE_CLOUD_PROJECT} instances create ${MACHINE
   --image=debian-9-stretch-v20180716 --image-project=debian-cloud \
   --boot-disk-size=20GB --boot-disk-type=pd-standard --boot-disk-device-name=${MACHINE}
 
+# SSD small drive
+gcloud beta compute --project=${GOOGLE_CLOUD_PROJECT} instances create ${MACHINE} \
+  --zone=us-central1-a --machine-type=n1-standard-8 \
+  --subnet=default --network-tier=PREMIUM --maintenance-policy=TERMINATE \
+  --service-account=${SERVICE_ACCOUNT} \
+  --scopes=https://www.googleapis.com/auth/cloud-platform \
+  --image=debian-9-stretch-v20180716 --image-project=debian-cloud \
+  --boot-disk-size=100GB --boot-disk-type=pd-ssd --boot-disk-device-name=${MACHINE}
+
+
 # SSD big drive
 gcloud beta compute --project=${GOOGLE_CLOUD_PROJECT} instances create ${MACHINE} \
   --zone=us-central1-a --machine-type=n1-standard-8 \
@@ -35,7 +46,6 @@ gcloud beta compute --project=${GOOGLE_CLOUD_PROJECT} instances create ${MACHINE
   --scopes=https://www.googleapis.com/auth/cloud-platform \
   --image=debian-9-stretch-v20180716 --image-project=debian-cloud \
   --boot-disk-size=1000GB --boot-disk-type=pd-ssd --boot-disk-device-name=${MACHINE}
-
 
  gcloud compute instances list
  
