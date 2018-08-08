@@ -14,7 +14,7 @@ gcloud beta compute instances create hyperopt-1 \
 # Create compute instance
 ~~~~
 gcloud compute instances delete hyperopt-1 --zone us-central1-a --delete-disks=all
-~~~
+~~~~
 
 # Create a dataproc cluster
 ~~~~
