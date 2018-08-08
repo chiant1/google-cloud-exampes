@@ -23,7 +23,7 @@ gcloud beta compute instances create hyperopt-1 \
   
 gcloud beta compute instances create hyperopt-1 \
   --zone=us-central1-a \
-  --machine-type=n1-highcpu-96 \
+  --machine-type=n1-highcpu-64 \
   --min-cpu-platform=Intel\ Skylake \
   --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE \
   --service-account=${SERVICE_ACCOUNT} \
