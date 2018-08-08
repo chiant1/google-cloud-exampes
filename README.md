@@ -11,7 +11,7 @@ gcloud beta compute instances create test-2 \
   --metadata=startup-script-url=gs://achikin/datalab-notebooks/trackml/dataproc/init-hyperopt.sh
   
 gcloud beta compute instances create hyperopt-1 \
-  --zone=us-central1-a --machine-type=n1-highcpu-32 \
+  --zone=us-central1-a --machine-type=n1-highcpu-96 \
   --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE \
   --service-account=${SERVICE_ACCOUNT} \
   --scopes=https://www.googleapis.com/auth/cloud-platform \
@@ -19,6 +19,21 @@ gcloud beta compute instances create hyperopt-1 \
   --image-project=debian-cloud \
   --boot-disk-size=30GB --boot-disk-type=pd-standard --boot-disk-device-name=hyperopt-1 \
   --metadata=startup-script-url=gs://achikin/datalab-notebooks/trackml/dataproc/init-hyperopt.sh
+  
+  
+gcloud beta compute instances create hyperopt-1 \
+  --zone=us-central1-a \
+  --machine-type=n1-highcpu-96 \
+  --min-cpu-platform=Intel\ Skylake \
+  --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE \
+  --service-account=${SERVICE_ACCOUNT} \
+  --scopes=https://www.googleapis.com/auth/cloud-platform \
+  --image=debian-9-stretch-v20180806 \
+  --image-project=debian-cloud \
+  --boot-disk-size=30GB --boot-disk-type=pd-standard --boot-disk-device-name=hyperopt-1 \
+  --metadata=startup-script-url=gs://achikin/datalab-notebooks/trackml/dataproc/init-hyperopt.sh
+
+
 ~~~~
 
 # Create compute instance
