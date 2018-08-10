@@ -31,17 +31,27 @@ gcloud beta compute instances create predict-3 \
   --boot-disk-size=30GB --boot-disk-type=pd-standard --boot-disk-device-name=predict-3 \
   --metadata=startup-script-url=gs://achikin/datalab-notebooks/trackml/dataproc/init-hyperopt.sh
   
-gcloud beta compute instances create predict-4 \
+gcloud beta compute instances create eval-8 \
   --zone=us-east1-b \
-  --machine-type=n1-highcpu-64 \
+  --machine-type=n1-highcpu-8 \
   --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE \
   --service-account=${SERVICE_ACCOUNT} \
   --scopes=https://www.googleapis.com/auth/cloud-platform \
   --image=debian-9-stretch-v20180806 \
   --image-project=debian-cloud \
-  --boot-disk-size=30GB --boot-disk-type=pd-standard --boot-disk-device-name=predict-4 \
+  --boot-disk-size=30GB --boot-disk-type=pd-standard --boot-disk-device-name=eval-8 \
   --metadata=startup-script-url=gs://achikin/datalab-notebooks/trackml/dataproc/init-hyperopt.sh
 
+gcloud beta compute instances create eval-1 \
+  --zone=us-central1-a \
+  --machine-type=n1-highcpu-8 \
+  --subnet=default --network-tier=PREMIUM --maintenance-policy=MIGRATE \
+  --service-account=${SERVICE_ACCOUNT} \
+  --scopes=https://www.googleapis.com/auth/cloud-platform \
+  --image=debian-9-stretch-v20180806 \
+  --image-project=debian-cloud \
+  --boot-disk-size=30GB --boot-disk-type=pd-standard --boot-disk-device-name=eval-1 \
+  --metadata=startup-script-url=gs://achikin/datalab-notebooks/trackml/dataproc/init-hyperopt.sh
 
 ~~~~
 
