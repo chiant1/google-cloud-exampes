@@ -9,6 +9,8 @@ sudo apt-get update
 sudo apt-get install -y tensorrt
 sudo apt-get install -y python-libnvinfer-doc
 sudo apt-get install -y uff-converter-tf
+
+pip install -U --user tensorflow_gpu-1.10.0-cp27-none-linux_x86_64.whl
 ~~~~
 
 # Install TensorRT 3.x.x
@@ -18,4 +20,6 @@ sudo apt-get update
 sudo apt-get install -y tensorrt
 sudo apt-get install -y python-libnvinfer-doc
 sudo apt-get install -y uff-converter-tf
+
+pip install -U --user tensorflow_gpu-1.10.0-cp27-none-linux_x86_64.whl
 ~~~~
