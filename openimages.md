@@ -3,6 +3,7 @@
 2. https://medium.com/tensorflow/speed-up-tensorflow-inference-on-gpus-with-tensorrt-13b49f3db3fa
 3. https://3sidedcube.com/guide-retraining-object-detection-models-tensorflow/
 4. https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_pets.md
+5. https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/challenge_evaluation.md
 
 # Install TensorRT 4.x.x
 ~~~~
